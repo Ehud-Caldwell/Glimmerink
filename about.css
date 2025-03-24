@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+.logo img{
+  max-width: 150px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #222;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  transition: 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  background-color: orange;
+  color: black;
+  border-radius: 5px;
+}
+nav ul li a.active {
+  background-color: orange;
+  color: black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+/* Fix issue of navbar cutting off content */
+nav ul {
+  flex-wrap: wrap;
+}
+
+/* Mobile Menu */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* 🔹 About Section */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 100px auto 40px;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.about-content {
+  width: 50%;
+  padding: 20px;
+  text-align: left;
+}
+.about-image {
+  width: 50%;
+  text-align: center;
+}
+.about-image img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Core Values Section */
+.values {
+  text-align: center;
+  padding: 50px 20px;
+}
+.values h2 {
+  color: #002366;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.values-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.value-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.value-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+}
+
+/* 🔹 Footer */
+footer {
+  background: #002366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* ✅ Responsive Fixes */
+@media screen and (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-content,
+  .about-image {
+    width: 100%;
+  }
+  .about-image img {
+    width: 80%;
+  }
+  .values-container {
+    flex-direction: column;
+  }
+  .value-box {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .logo img 
+  max-width: 100px;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    padding: 10px 0;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .nav-links li a {
+    color: black;
+    padding: 12px;
+    display: block;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .about-content {
+    width: 100%;
+  }
+  .about-image {
+    width: 100%;
+  }
+  .about-image img {
+    width: 80%;
+  }
+  .value-box {
+    width: 100%;
+  }
+}
